@@ -1,0 +1,30 @@
+# Arquivos de ambiente
+.env
+*.env.*
+
+# Arquivos de dependências
+__pycache__/
+*.py[cod]
+
+# Arquivos de teste
+.coverage
+htmlcov/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Resultados da análise
+analise_commits.png
+data/
+results/
