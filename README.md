@@ -1,38 +1,77 @@
-# Análise de Ritmos de Desenvolvimento Global
+#  Global Development Rhythms Analysis
 
-Este projeto analisa os padrões de commit em projetos open source populares para entender como desenvolvedores em diferentes fusos horários contribuem durante o dia.
+A comprehensive analysis tool for understanding contribution patterns across different time zones in popular open-source projects. This project helps visualize how developers worldwide collaborate throughout their working days.
 
-## Instalação
+##  Key Features
 
-```bash
+- Temporal analysis of commit patterns across multiple repositories
+- Visualization of contribution distributions across time zones
+- Statistical insights into global development workflows
+- Extensible architecture for custom repository analysis
+
+##  Getting Started
+
+Install dependencies```bash
 pip install -r requirements.txt
 ```
 
-## Uso
+Configure GitHub API access- Generate a personal access token at [GitHub Settings > Developer Settings > Personal Access Tokens](https://github.com/settings/tokens)
+- Replace `'SEU_TOKEN_AQUI'` in `src/github_api.py` with your token
 
-1. Obtenha um token pessoal do GitHub
-2. Substitua `'SEU_TOKEN_AQUI'` no arquivo `src/github_api.py`
-3. Execute:
-```bash
+Run the analysis```bash
 python main.py
 ```
 
-## Resultados
+##  Output Visualizations
 
-O projeto gera duas visualizações principais:
+### Temporal Distribution Analysis
 
-### Gráfico de Linha Temporal
-Mostra a quantidade de commits por hora para cada fuso horário
+- Hourly commit frequency visualization across time zones
+- Interactive plots showing contribution patterns
+- Statistical summaries of development activity
 
-### Mapa de Calor
-Apresenta uma visão geral da distribuição de commits ao longo do dia e entre fusos horários
+### Heatmap Visualization
 
-## Contribuições
+- Comprehensive view of commit distribution
+- Color-coded intensity mapping
+- Clear temporal pattern identification
 
-Você pode adicionar mais repositórios modificando a lista `repositarios` no arquivo `main.py`.
+##  Customization Options
 
-## Limitações
+Add repositoriesModify the `repositories` list in `main.py` to include additional projectsAdjust analysis parametersConfigure time windows and visualization options in the configuration fileExtend functionalityAdd custom metrics and visualizations through the modular architecture##  Technical Considerations
 
-- O GitHub tem limites de taxa de requisição
-- Os dados são coletados apenas dos últimos commits disponíveis
-- A detecção do fuso horário é baseada nos timestamps dos commits
+### Rate Limiting
+
+- GitHub API rate limits apply to all requests
+- Built-in delay mechanisms prevent API restrictions
+- Optimized batch processing for efficient data collection
+
+### Data Collection
+
+- Analysis based on available commit history
+- Time zone detection from commit timestamps
+- Robust error handling for missing data points
+
+##  Contributing
+
+Contributions are welcome! Submit pull requests or open issues to:
+
+- Add new visualization types
+- Implement additional metrics
+- Enhance repository selection criteria
+- Improve documentation
+
+##  Documentation
+
+Detailed technical documentation is maintained in the `docs` directory, including:
+
+- API usage guidelines
+- Development setup instructions
+- Testing procedures
+- Code contribution standards
+
+##  Acknowledgments
+
+Special thanks to the open-source community for maintaining the repositories analyzed by this tool. Your contributions help us understand global development patterns better.
+
+Note This project is actively maintained and welcomes feedback through GitHub discussions or issues.
